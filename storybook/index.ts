@@ -4,11 +4,10 @@ import { configure, getStorybookUI } from '@storybook/react-native';
 
 import './rn-addons';
 import { loadStories } from './storyLoader';
+import { centered } from './decorators/centered';
 
 // global decorators
-// addDecorator(appProviders);
-// addDecorator(storyFn => <View style={{ backgroundColor: 'red', flex: 1 }}>{storyFn()}</View>);
-// addDecorator(backgroundColor('red'));
+addDecorator(centered)
 
 // import stories
 configure(() => {
