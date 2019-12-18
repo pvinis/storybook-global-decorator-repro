@@ -6,7 +6,8 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
-    "test": "jest"
+    "story": "start-storybook -p 7007",
+    "prestory": "rnstl"
   },
   "dependencies": {
     "react": "16.9.0",
@@ -46,5 +47,14 @@
       "json",
       "node"
     ]
+  },
+  "config": {
+    "react-native-storybook-loader": {
+        "searchDir": [
+            "./app"
+        ],
+        "pattern": "**/*stories.tsx",
+        "outputFile": "./storybook/storyLoader.js"
+    }
   }
 }
